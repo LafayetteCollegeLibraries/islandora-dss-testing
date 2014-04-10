@@ -19,12 +19,13 @@ describe "SolrFacetsFormatMedium" do
   end
   
   it "test_solr_facets_format_medium" do
-    @driver.get(@base_url)
+    @driver.get(@base_url + "/")
     @driver.find_element(:link, "Collections").click
     @driver.find_element(:link, "East Asia Image Collection").click
     @driver.find_element(:link, "Title.English").click
+    !60.times{ break if (element_present?(:css, "li.loaded") rescue false); sleep 1 }
     @driver.find_element(:link, "Picture postcard").click
-    @driver.find_element(:css, "p.lead").click
+    !60.times{ break if (element_present?(:css, "p.lead") rescue false); sleep 1 }
     (@driver.find_element(:css, "p.lead").text).should == "2614 Items Found"
   end
   

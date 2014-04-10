@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://digital.stage.lafayette.edu/" />
-<title>solr_facets_format_medium</title>
+<title>solr_browse_sort_format_medium</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">solr_facets_format_medium</td></tr>
+<tr><td rowspan="1" colspan="3">solr_browse_sort_format_medium</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -28,28 +28,13 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Title.English</td>
+	<td>link=Format.Medium</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>css=li.loaded</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Picture postcard</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=p.lead</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=p.lead</td>
-	<td>2614 Items Found</td>
+	<td>assertValue</td>
+	<td>id=field-sort-select</td>
+	<td>eastasia.Format.Medium.sort</td>
 </tr>
 
 </tbody></table>

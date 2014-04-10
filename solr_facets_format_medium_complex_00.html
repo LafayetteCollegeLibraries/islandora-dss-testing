@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://digital.stage.lafayette.edu/" />
-<title>solr_facets_format_medium</title>
+<title>solr_facets_format_medium_complex</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">solr_facets_format_medium</td></tr>
+<tr><td rowspan="1" colspan="3">solr_facets_format_medium_complex</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -33,7 +33,37 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>css=li.loaded</td>
+	<td>css=p.lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=340 STRUCTURES</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Taiwan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Taipei</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.lead</td>
 	<td></td>
 </tr>
 <tr>
@@ -49,7 +79,12 @@
 <tr>
 	<td>assertText</td>
 	<td>css=p.lead</td>
-	<td>2614 Items Found</td>
+	<td>73 Items Found</td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
 </tr>
 
 </tbody></table>
