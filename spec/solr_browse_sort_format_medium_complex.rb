@@ -52,11 +52,19 @@ describe "SolrBrowseSortFormatMediumComplex" do
             (@driver.find_element(:id, "field-sort-select").attribute("value")).should == field.values.shift
             
             !60.times{ break if (element_present?(:css, "p.lead") rescue false); sleep 1 }
+
+            # Add the facet
             @driver.find_element(:link, "Imperial Postcard Collection").click
             !60.times{ break if (element_present?(:css, "p.lead") rescue false); sleep 1 }
             (@driver.find_element(:id, "field-sort-select").attribute("value")).should == field.values.shift
+
+            # Remove the facet
+            @driver.find_element(:css, "li.last > a.islandora-solr-facet-token.active > span.close").click
+
+            !60.times{ break if (element_present?(:css, "p.lead") rescue false); sleep 1 }
+            (@driver.find_element(:id, "field-sort-select").attribute("value")).should == field.values.shift
           end
-      
+
           it "should be able to retain sorting by #{field.keys.shift} after refining by a date range" do
 
             @driver.get(@base_url)
@@ -69,6 +77,13 @@ describe "SolrBrowseSortFormatMediumComplex" do
             # ERROR: Caught exception [ERROR: Unsupported command [dragAndDrop | //section[@id='block-islandora-solr-facet-pages-islandora-solr-facet-pages']/div[7]/a | +70,0]]
             # @driver.find_element(:xpath, "//section[@id='block-islandora-solr-facet-pages-islandora-solr-facet-pages']/div[7]/a").drag_and_drop_by(70, 0)
             @driver.action.drag_and_drop_by(@driver.find_element(:xpath, "//section[@id='block-islandora-solr-facet-pages-islandora-solr-facet-pages']/div[7]/a"), 70, 0).perform
+
+            !60.times{ break if (element_present?(:css, "p.lead") rescue false); sleep 1 }
+            (@driver.find_element(:id, "field-sort-select").attribute("value")).should == field.values.shift
+
+            # Remove the facet
+            # @driver.find_element(:xpath, "//section[@id='block-islandora-solr-facet-pages-islandora-solr-facet-pages']/ul/li[2]/a/span").click
+            @driver.find_element(:css, "a.islandora-solr-date-reset.islandora-solr-facet-token > span.close").click
 
             !60.times{ break if (element_present?(:css, "p.lead") rescue false); sleep 1 }
             (@driver.find_element(:id, "field-sort-select").attribute("value")).should == field.values.shift
