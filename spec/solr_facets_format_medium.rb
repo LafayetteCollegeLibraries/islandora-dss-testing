@@ -19,7 +19,7 @@ describe "SolrFacetsFormatMedium" do
   end
   
   it "test_solr_facets_format_medium" do
-    @driver.get(@base_url + "/")
+    @driver.get(@base_url)
     @driver.find_element(:link, "Collections").click
     @driver.find_element(:link, "East Asia Image Collection").click
     @driver.find_element(:link, "Title.English").click
