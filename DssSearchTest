@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://digital.stage.lafayette.edu/" />
+<title>DSS Search Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DSS Search Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;search the site&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=label.option.radio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit-scoping-site</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=edit-terms-0-field-wrapper-field--2</td>
+	<td>DSS Pages</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit-terms-0-field-wrapper-search--2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-terms-0-field-wrapper-search--2</td>
+	<td>james</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit--3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.title &gt; a</td>
+	<td>People</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Swift Poems Project</td>
+	<td>Swift Poems Project</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;search the site&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit-terms-0-field-wrapper-search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-terms-0-field-wrapper-search</td>
+	<td>thom</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit--4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.title &gt; a</td>
+	<td>People</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;search the site&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit-terms-0-field-wrapper-search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-terms-0-field-wrapper-search</td>
+	<td>Thom </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit--4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.title &gt; a</td>
+	<td>People</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;digital scholarship services logo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;search the site&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=label.option.radio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit-scoping-site</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=edit-terms-0-field-wrapper-field--2</td>
+	<td>DSS Pages</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit-terms-0-field-wrapper-search--2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-terms-0-field-wrapper-search--2</td>
+	<td>contact</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-terms-0-field-wrapper-hidden-submit--2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Contact Digital Scholarship Services</td>
+	<td>Contact Digital Scholarship Services</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Contact Digital Scholarship Services')])[2]</td>
+	<td>Contact Digital Scholarship Services</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Copyright</td>
+	<td>Copyright</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Services')])[5]</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Page Not Found</td>
+	<td>Page Not Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=About the East Asia Image Collections</td>
+	<td>About the East Asia Image Collections</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Access Denied</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Digital Scholarship Services')])[4]</td>
+	<td>Digital Scholarship Services</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
