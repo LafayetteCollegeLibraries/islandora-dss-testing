@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://digital.prod.lafayette.edu/" />
+<title>WWII Complex Search Controls Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">WWII Complex Search Controls Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/collections/war</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h2.block-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Silver Star</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p.lead</td>
+	<td>5 Items Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>5 Items Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×Silver Star</td>
+	<td>×Silver Star</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Captain</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×Captain</td>
+	<td>×Captain</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×Captain</td>
+	<td>×Captain</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>2 Items Found</td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>//ul[@id='war-casualties-description-class']/li[3]/span</td>
+	<td>()</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Army</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p.lead</td>
+	<td>2 Items Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×Army</td>
+	<td>×Army</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>2 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=1939</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×1939</td>
+	<td>×1939</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×1939</td>
+	<td>×1939</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>1 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//section[@id='block-islandora-solr-facet-pages-islandora-solr-facet-pages']/ul/li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Captain</td>
+	<td>Captain</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>1 Items Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Captain</td>
+	<td>Captain</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//section[@id='block-islandora-solr-facet-pages-islandora-solr-facet-pages']/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p.lead</td>
+	<td>3 Items Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Silver Star</td>
+	<td>Silver Star</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>3 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-desc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ol/li</td>
+	<td>Name Simmons, Harold Elias... Graduating Class 1939 Military Branch Army Military Unit Counter Intelligence Corps, Intelligence Division</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ol/li</td>
+	<td>Name Simmons, Harold Elias... Graduating Class 1939 Military Branch Army Military Unit Counter Intelligence Corps, Intelligence Division</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Hide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Grid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.islandora-basic-collection-grid.clearfix</td>
+	<td>Simmons, Harold Elias... Name Simmons, Harold Elias... Graduating Class 1939 Military Branch Army Military Unit Counter Intelligence Corps, Intelligence Division Rickards, Garrett Van Schaick... Name Rickards, Garrett Van Schaick... Graduating Class 1939 Military Branch Army Military Unit 77th Division Greene, George Newton... Name Greene, George Newton... Graduating Class 1939 Military Branch Army Military Unit Air Borne Glider, Infantry</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.islandora-basic-collection-grid.clearfix</td>
+	<td>Simmons, Harold Elias... Name Simmons, Harold Elias... Graduating Class 1939 Military Branch Army Military Unit Counter Intelligence Corps, Intelligence Division Rickards, Garrett Van Schaick... Name Rickards, Garrett Van Schaick... Graduating Class 1939 Military Branch Army Military Unit 77th Division Greene, George Newton... Name Greene, George Newton... Graduating Class 1939 Military Branch Army Military Unit Air Borne Glider, Infantry</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
