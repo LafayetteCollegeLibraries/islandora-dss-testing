@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://digital.prod.lafayette.edu/" />
+<title>EAIC Complex Search Controls Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EAIC Complex Search Controls Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/collections/eastasia</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Title.English</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-desc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=[ww0043] Savage Girls of Jitsugetsutan</td>
+	<td>[ww0043] Savage Girls of Jitsugetsutan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=[ww0043] Savage Girls of Jitsugetsutan</td>
+	<td>[ww0043] Savage Girls of Jitsugetsutan</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=[wa0322] [An Ami couple dressed in regalia]</td>
+	<td>[wa0322] [An Ami couple dressed in regalia]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=[wa0322] [An Ami couple dressed in regalia]</td>
+	<td>[wa0322] [An Ami couple dressed in regalia]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Korea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×Korea</td>
+	<td>×Korea</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×Korea</td>
+	<td>×Korea</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>364 Items Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ol/li</td>
+	<td>Title.English [ip1016] [Northern Korea's Wool Sheep] Subject.OCM 230 ANIMAL HUSBANDRY, 233 PASTORAL ACTIVITIES Coverage.Location.Country Korea Relation.IsPartOf East Asia Image Collection, Imperial Postcard Collection Creator.Maker</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-asc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=[cf0016] [Sugar Factory Viewed from Daedong Riverfront in Pyongyang]</td>
+	<td>[cf0016] [Sugar Factory Viewed from Daedong Riverfront in Pyongyang]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=[cf0016] [Sugar Factory Viewed from Daedong Riverfront in Pyongyang]</td>
+	<td>[cf0016] [Sugar Factory Viewed from Daedong Riverfront in Pyongyang]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=&gt;|</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=[ip1013] Main Street of Chemulpo, Corea.</td>
+	<td>[ip1013] Main Street of Chemulpo, Corea.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=[ip1013] Main Street of Chemulpo, Corea.</td>
+	<td>[ip1013] Main Street of Chemulpo, Corea.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=|&lt;</td>
+	<td>|&lt;</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=field-sort-select</td>
+	<td>label=Date.Artifact.Upper</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;eastasia.Date.Artifact.Upper&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=[ip0455] [Emperor Gojong and Crown Prince Sunjong]</td>
+	<td>[ip0455] [Emperor Gojong and Crown Prince Sunjong]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=[ip0455] [Emperor Gojong and Crown Prince Sunjong]</td>
+	<td>[ip0455] [Emperor Gojong and Crown Prince Sunjong]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=&gt;|</td>
+	<td>&gt;|</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=refine-search-icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=refine-search-icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Picture postcard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×Picture postcard</td>
+	<td>×Picture postcard</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×Picture postcard</td>
+	<td>×Picture postcard</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>355 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Gyeongju</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×Gyeongju</td>
+	<td>×Gyeongju</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=×Gyeongju</td>
+	<td>×Gyeongju</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>17 Items Found</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
