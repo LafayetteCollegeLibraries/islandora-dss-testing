@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://digital.prod.lafayette.edu/" />
+<title>MDLP Complex Search Controls Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">MDLP Complex Search Controls Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/collections/lafayetteprints</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=creator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.islandora-solr-content.content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=&gt;&gt;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Marie, Paul, Josh. Yves-Gil Mottier Mquis De La Fayette</td>
+	<td>Marie, Paul, Josh. Yves-Gil Mottier Mquis De La Fayette</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Marie, Paul, Josh. Yves-Gil Mottier Mquis De La Fayette</td>
+	<td>Marie, Paul, Josh. Yves-Gil Mottier Mquis De La Fayette</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Hide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=refine-search-icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h2.block-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=×Marquis de Lafayette Prints Collection</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.islandora-solr-facet</td>
+	<td>Choose a Collection</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>34421 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=McKelvy House Photograph Collection</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×McKelvy House Photograph Collection</td>
+	<td>×McKelvy House Photograph Collection</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>211 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.islandora-solr-facet</td>
+	<td>Choose a Collection</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>34421 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=McKelvy House Photograph Collection</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×McKelvy House Photograph Collection</td>
+	<td>×McKelvy House Photograph Collection</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>211 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-desc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//dl[2]/dd</td>
+	<td>[Oakhurst]...</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=dd.solr-value.eastasia-format-medium</td>
+	<td>9 x 14 cm. (image), 9.5 x 14.5 cm. (on sheet), photograph</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Hide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Grid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.islandora-basic-collection-grid.clearfix</td>
+	<td>[Oakhurst]... Title [Oakhurst]... Format.Medium 9 x 14 cm. (image), 9.5 x 14.5 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy House, McKelvy family Date [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 21.5 x 14 cm. (image), 25 x 20 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Roth, Mary Joel S., Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16 x 24 cm. (image), 17.5 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House, Teller, Edward, 1908-2003 Date 1982-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16 x 24 cm. (image), 20 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Crawford, James P., 1935-2003, Lafayette College (Easton, Pa.). McKelvy House Date 1973-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16.5 x 24 cm. (image), 17.5 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16.5 x 24 cm. (image), 17.5 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16 x 24 cm. (image), 20 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1972-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16.5 x 24 cm. (image), 17.5 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium photograph, 16 x 22.5 cm. (image), 20 x 25 cm. (on sheet) Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Taylor, Billy, 1921-2010, Lafayette College (Easton, Pa.). McKelvy House Date [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 21.5 x 14.5 cm. (image), 25 x 20 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 14.5 x 21.5 cm. (image), 20 x 25 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 11 x 16.5 cm. (image), 12 x 17.5 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House, Teller, Edward, 1908-2003 Date 1982-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 11 cm. x 16.5 cm. (image), 12 x 17.5 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1978-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 14.5 x 21.5 cm. (image), 20 x 25 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 16 x 24 cm. (image), 20.5 x 25 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Crawford, James P., 1935-2003, Lafayette College (Easton, Pa.). McKelvy House Date 1973-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 14.5 x 22 cm. (image), 20 x 25 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 14.5 x 22 cm. (image), 20 x 25 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy Scholars Program]... Title [McKelvy Scholars Program]... Format.Medium 14.5 x 21.5 cm. (image), 20 x 25 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy Scholars Program, Lafayette College (Easton, Pa.). McKelvy House Date 1983-01-01 [McKelvy House: McKelvy Family Slides]... Title [McKelvy House: McKelvy Family Slides]... Format.Medium 2.5 x 3.5 cm. (image), 5 x 5 cm. (slide), slide Subject Lafayette College (Easton, Pa.). McKelvy House, McKelvy family Date [McKelvy House: McKelvy Family Slides]... Title [McKelvy House: McKelvy Family Slides]... Format.Medium 2.5 x 3.5 cm. (image), 5 x 5 cm. (slide), slide Subject Lafayette College (Easton, Pa.). McKelvy House, McKelvy family Date</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//a[contains(text(),'[McKelvy Scholars Program]...')])[3]</td>
+	<td>[McKelvy Scholars Program]...</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Hide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2.block-title</td>
+	<td>Refine your search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=photograph</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=×photograph</td>
+	<td>×photograph</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=×photograph</td>
+	<td>×photograph</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>161 Items Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-asc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//dl[6]/dd</td>
+	<td>Mr. Eyerman's Italian Garden...</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//dl[6]/dd</td>
+	<td>Mr. Eyerman's Italian Garden...</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-sort-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=field-sort-select</td>
+	<td>label=Date.Original</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;mckelvy.date.original.display&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=The Italian Garden at Oakhurst, the Home of John Eyerman, College Hill...</td>
+	<td>The Italian Garden at Oakhurst, the Home of John Eyerman, College Hill...</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=The Italian Garden at Oakhurst, the Home of John Eyerman, College Hill...</td>
+	<td>The Italian Garden at Oakhurst, the Home of John Eyerman, College Hill...</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//dl[20]</td>
+	<td>Mr. Eyerman's Italian Garden... Title Mr. Eyerman's Italian Garden... Format.Medium 5 x 7.5 cm. (image), 6 x 8.5 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy House, Barrett, Nathan Franklin, 1845-1919, Eyerman family Date</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//dl[20]</td>
+	<td>Mr. Eyerman's Italian Garden... Title Mr. Eyerman's Italian Garden... Format.Medium 5 x 7.5 cm. (image), 6 x 8.5 cm. (on sheet), photograph Subject Lafayette College (Easton, Pa.). McKelvy House, Barrett, Nathan Franklin, 1845-1919, Eyerman family Date</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=view-list-icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//li[20]/dl[2]/dd</td>
+	<td>Mr. Eyerman's Italian Garden...</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//li[20]/dl[2]/dd</td>
+	<td>Mr. Eyerman's Italian Garden...</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//dl[2]/dd</td>
+	<td>Oakhurst, the Home of John Eyerman, College Hill...</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//dl[2]/dd</td>
+	<td>Oakhurst, the Home of John Eyerman, College Hill...</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
