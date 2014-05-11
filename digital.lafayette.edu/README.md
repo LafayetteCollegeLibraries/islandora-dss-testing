@@ -1,7 +1,7 @@
 # Functional Testing Suite for digital.lafayette.edu
 ## Contributors
- 1. [jrgriffiniii](griffinj@lafayette.edu)
- 2. [goodnowt](goodnowt@lafayette.edu)
+ 1. [griffinj \[at\] lafayette.edu](https://github.com/jrgriffiniii)
+ 2. goodnowt \[at\] goodnowt@lafayette.edu
 
 ## Faceted Browsing (Apache Solr and jQuery UI)
  1. solr\_browse\_sort\_format\_medium\_complex\_00

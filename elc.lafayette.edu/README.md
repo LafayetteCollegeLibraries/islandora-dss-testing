@@ -1,6 +1,6 @@
 # Functional Testing Suite for elc.lafayette.edu
 ## Contributors
- 1. [jrgriffiniii](griffinj@lafayette.edu)
+ 1. [griffinj \[at\] lafayette.edu](https://github.com/jrgriffiniii)
 
 ## Drupal Content Node Management
 ### Node Forms
