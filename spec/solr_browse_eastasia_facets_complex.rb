@@ -7,7 +7,8 @@ describe "SolrBrowseMdlPrintsFacetSubjectLcsh" do
 
   before(:each) do
     @driver = Selenium::WebDriver.for :firefox
-    @base_url = "http://digital.stage.lafayette.edu"
+#    @base_url = "http://digital.stage.lafayette.edu"
+    @base_url = "http://digital.prod.lafayette.edu"
     @accept_next_alert = true
     # @driver.manage.timeouts.implicit_wait = 30
     @driver.manage.timeouts.implicit_wait = 5
