@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://digital.prod.lafayette.edu/" />
+<title>Item Level Metadata Links</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Item Level Metadata Links</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/browse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Air Crew Students Welcomed at Lafayette</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=United States -- Army Air Forces</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>css=p.lead</td>
+	<td>0 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/cap-0354</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=World War, 1941-1945</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>css=p.lead</td>
+	<td>0 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/cap-0354</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Adrienne Club</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>css=p.lead</td>
+	<td>0 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/cap-0354</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=photographs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>1078 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/cap-0354</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=dd.note &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>1162 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/browse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Senior Pee-rade</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Student activities</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>44 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/cap-0337</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=photographic postcards</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>30 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/browse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=[Alexis Hall]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Lafayette College (Easton, Pa.) -- Buildings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>88 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/cap-0074</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=photographs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>1078 Items Found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/collections/historicalphotos/browse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'4')])[30]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ol/li</td>
+	<td>Title [Baseball Game 1950-1959] Publication Date 1950-01-01 Subject Lafayette College (Easton, Pa.) -- Baseball Medium photographs</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=[Baseball Team 1886]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Lafayette College (Easton, Pa.) -- Baseball</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.lead</td>
+	<td>14 Items Found</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
