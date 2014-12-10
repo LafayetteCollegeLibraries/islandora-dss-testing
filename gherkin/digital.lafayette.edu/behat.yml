@@ -1,0 +1,9 @@
+default:
+    extensions:
+        Behat\MinkExtension\Extension:
+            # goutte: ~
+            zombie: ~
+            base_url: http://digital.stage.lafayette.edu/
+            default_session: zombie
+            javascript_session: zombie
+

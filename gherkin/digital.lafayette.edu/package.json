@@ -1,0 +1,7 @@
+{
+  "name": "digital.lafayette.edu",
+  "version": "0.1.0",
+  "devDependencies": {
+    "zombie": "~1.4.1"
+  }
+}
