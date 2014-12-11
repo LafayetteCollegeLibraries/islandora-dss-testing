@@ -12,11 +12,9 @@ use Behat\MinkExtension\Context\MinkContext;
 //
 // Require 3rd-party libraries here:
 //
-//   require_once 'PHPUnit/Autoload.php';
-//   require_once 'PHPUnit/Framework/Assert/Functions.php';
+require_once 'PHPUnit/Autoload.php';
+require_once 'PHPUnit/Framework/Assert/Functions.php';
 //
-
-
 
 /**
  * Features context.
@@ -52,6 +50,8 @@ class FeatureContext extends MinkContext
     {
       $this->getSession()->visit('/collection/' . $arg1);
 
+      assertEquals(true, false);
+
       throw new PendingException();
     }
 
@@ -60,6 +60,12 @@ class FeatureContext extends MinkContext
      */
     public function iSelectTheTokenForTheField($arg1, $arg2)
     {
+      $session = $this->getSession();
+      $session->click('#MODS-mods-originInfo-publisher-s.islandora-solr-facet-list li.first a.active');
+      //$session->wait();
+
+      //$this->getSession()->wat
+
       throw new PendingException();
     }
 
