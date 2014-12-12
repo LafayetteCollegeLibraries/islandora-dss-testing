@@ -76,4 +76,46 @@ class FeatureContext extends MinkContext
     {
       throw new PendingException();
     }
+
+    /**
+     * @When /^I submit the form with "([^"]*)"$/
+     */
+    public function iSubmitTheFormWith($arg1)
+    {
+
+      //$selector = new \Behat\Mink\Selector\NamedSelector();
+      //$handler  = new \Behat\Mink\Selector\SelectorsHandler(array('submit' => $selector));
+
+      //$this->getSession()->getPage()->findById($arg1)->click();
+
+      //throw new PendingException();
+    }
+
+    /**
+     * @When /^I submit the form "([^"]*)" with "([^"]*)"$/
+     */
+    public function iSubmitTheFormWith2($arg1, $arg2)
+    {
+
+      $page = $this->getSession()->getPage();
+      $element = $page->find('css',$arg1 . " " . $arg2);
+      $element->doubleClick();
+      //throw new PendingException();
+    }
+
+    /**
+     * @When /^I click "([^"]*)" and wait for "([^"]*)"$/
+     */
+    public function iClickAndWaitFor($arg1, $arg2)
+    {
+
+      $page = $this->getSession()->getPage();
+      $element = $page->find('css', $arg1);
+      $element->click();
+      $this->getSession()->wait(7500,
+				"$('#islandora-dss-solr-advanced-search-form:visible').length > 0"
+				//"$('.suggestions-results').children().length > 0"
+				);
+      //throw new PendingException();
+    }
 }
