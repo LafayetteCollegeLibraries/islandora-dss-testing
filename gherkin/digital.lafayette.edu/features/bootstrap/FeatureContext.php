@@ -112,10 +112,20 @@ class FeatureContext extends MinkContext
       $page = $this->getSession()->getPage();
       $element = $page->find('css', $arg1);
       $element->click();
-      $this->getSession()->wait(7500,
-				"$('#islandora-dss-solr-advanced-search-form:visible').length > 0"
-				//"$('.suggestions-results').children().length > 0"
-				);
+      $this->getSession()->wait(7500, "$('$arg2').length > 0");
+
       //throw new PendingException();
     }
+
+    /**
+     * @Given /^I wait for "([^"]*)"$/
+     */
+    public function iWaitFor($arg1)
+    {
+
+      $this->getSession()->wait(7500, "$('$arg1:visible').length > 0");
+
+      //throw new PendingException();
+    }
+
 }
