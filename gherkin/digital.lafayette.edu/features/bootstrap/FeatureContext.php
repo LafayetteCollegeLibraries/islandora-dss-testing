@@ -51,8 +51,6 @@ class FeatureContext extends MinkContext
       $this->getSession()->visit('/collection/' . $arg1);
 
       assertEquals(true, false);
-
-      throw new PendingException();
     }
 
     /**
@@ -62,11 +60,6 @@ class FeatureContext extends MinkContext
     {
       $session = $this->getSession();
       $session->click('#MODS-mods-originInfo-publisher-s.islandora-solr-facet-list li.first a.active');
-      //$session->wait();
-
-      //$this->getSession()->wat
-
-      throw new PendingException();
     }
 
     /**
@@ -74,6 +67,7 @@ class FeatureContext extends MinkContext
      */
     public function iShouldRefineMyResults()
     {
+
       throw new PendingException();
     }
 
@@ -83,12 +77,7 @@ class FeatureContext extends MinkContext
     public function iSubmitTheFormWith($arg1)
     {
 
-      //$selector = new \Behat\Mink\Selector\NamedSelector();
-      //$handler  = new \Behat\Mink\Selector\SelectorsHandler(array('submit' => $selector));
-
-      //$this->getSession()->getPage()->findById($arg1)->click();
-
-      //throw new PendingException();
+      throw new PendingException();
     }
 
     /**
@@ -100,7 +89,6 @@ class FeatureContext extends MinkContext
       $page = $this->getSession()->getPage();
       $element = $page->find('css',$arg1 . " " . $arg2);
       $element->doubleClick();
-      //throw new PendingException();
     }
 
     /**
@@ -113,8 +101,6 @@ class FeatureContext extends MinkContext
       $element = $page->find('css', $arg1);
       $element->click();
       $this->getSession()->wait(7500, "$('$arg2').length > 0");
-
-      //throw new PendingException();
     }
 
     /**
@@ -124,8 +110,40 @@ class FeatureContext extends MinkContext
     {
 
       $this->getSession()->wait(7500, "$('$arg1:visible').length > 0");
-
-      //throw new PendingException();
     }
 
+    /**
+     * @Given /^print the "([^"]*)" element$/
+     */
+    public function printTheElement($arg1)
+    {
+
+      $page = $this->getSession()->getPage();
+      $element = $page->find('css', $arg1);
+    }
+
+    /**
+     * @When /^I change "([^"]*)"$/
+     */
+    public function iChange($arg1)
+    {
+
+      $this->getSession()->evaluateScript("(function($) { $(\" $arg1 \").change(); })(jQuery)");
+    }
+
+    /**
+     * @Given /^I change "([^"]*)" from "([^"]*)"$/
+     */
+    public function iChangeFrom($arg1, $arg2)
+    {
+
+      $this->getSession()->evaluateScript("(function($) {
+
+$(\" $arg2 \").attr('selected', null);
+$(\" $arg1 \").attr('selected', 'selected');
+$(\" $arg1 \").change();
+
+})(jQuery)");
+
+    }
 }

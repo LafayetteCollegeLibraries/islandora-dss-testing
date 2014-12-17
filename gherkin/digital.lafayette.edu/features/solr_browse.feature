@@ -5,28 +5,39 @@ Feature: Solr Browsing Interface
   I need to be able to refine subsets of Objects and sort these subjects by key fields
 
   @mink:zombie
-  Scenario: Filtering the Alumni Publications Collection by Publisher
-    Given I am on "collections/alumni/browse"
-    Then I should see "779 Items Found" in the "#page-header p.lead" element
-    When I follow "Alumni Association of Lafayette College"
-    Then I should see "595 Items Found" in the "#page-header p.lead" element
-    When I follow "Alumni Association of Lafayette College"
-    Then I should see "779 Items Found" in the "#page-header p.lead" element
+  Scenario Outline: Filtering the Alumni Publications Collection by a Single Field
+    Given I am on "collections/alumninewspubs/browse"
+    When I wait for ".islandora-solr-search-result-list"
+    Then I should see "<total-results> Items Found" in the "#page-header p.lead" element
+    When I follow "<facet>"
+    When I wait for ".islandora-solr-search-result-list"
+    Then I should see "<filtered-results> Items Found" in the "#page-header p.lead" element
+    When I follow "<facet>"
+    When I wait for ".islandora-solr-search-result-list"
+    Then I should see "<total-results> Items Found" in the "#page-header p.lead" element
+
+    Examples:
+    | total-results | facet                                   | filtered-results |
+    |           780 | Alumni Association of Lafayette College |              596 |
+    |           780 | Lafayette Alumni News [newspaper]       |              139 |
+    |           780 |                                         |                2 |
+
 
   @mink:zombie
-  Scenario: Filtering the Alumni Publications Collection by Series
-    Given I am on "collections/alumni/browse"
-    Then I should see "779 Items Found" in the "#page-header p.lead" element
-    When I follow "Lafayette Alumnus Football News Letter"
-    Then I should see "243 Items Found" in the "#page-header p.lead" element
-    When I follow "Lafayette Alumnus Football News Letter"
-    Then I should see "779 Items Found" in the "#page-header p.lead" element
+  Scenario Outline: Sorting the Alumni Publications Collection
 
-  @mink:zombie
-  Scenario: Filtering the Alumni Publications Collection by Volume
-    Given I am on "collections/alumni/browse"
-    Then I should see "779 Items Found" in the "#page-header p.lead" element
-    When I follow "#MODS-mods-relatedItem-part-detail-volume-number-i.islandora-solr-facet-list li.first a.active"
-    Then I should see "4 Items Found" in the "#page-header p.lead" element
-    When I follow "#MODS-mods-relatedItem-part-detail-volume-number-i.islandora-solr-facet-list li.first a.active"
-    Then I should see "779 Items Found" in the "#page-header p.lead" element
+    Given I am on "collections/browse?f[0]=cdm.Relation.IsPartOf%3A%22Alumni%20Publications%22&sort=<sort-field>%20asc"
+    When I wait for ".islandora-solr-search-result-list"
+    Then I should see a ".solr-value.first" element
+    And I should see "<initial-value>" in the ".solr-value.first" element
+    When I go to "collections/browse?f[0]=cdm.Relation.IsPartOf%3A%22Alumni%20Publications%22&sort=<sort-field>%20desc"
+    And I wait for ".islandora-solr-search-result-list"
+    And I should see a ".solr-value.first" element
+    Then I should see "<terminal-value>" in the ".solr-value.first" element
+
+    Examples:
+    | collection-set                    | sort-field                               | sort-order | initial-value                     | terminal-value                    |
+    | Alumni Publications               | MODS.mods.identifier.local_i             | Asc        | The Lafayette Alumnus             | Lafayette Magazine                |
+    | Alumni Publications               | MODS.mods.originInfo.publisher_ss        | Desc       | Leopard Letter                    | Lafayette Alumni News [newspaper] |
+    | collections/alumninewspubs/browse | MODS.mods.relatedItem.titleInfo.title_ss | Desc       | Lafayette Alumni News [newspaper] | Leopard Letter                    |
+
